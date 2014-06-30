@@ -2,25 +2,30 @@
 /*
 	Plugin Name: MDC Theme Switcher
 	Description: This plugin allows to switch and preview between available themes. It adds a sticky bar to front-end with a dropdown list of themes. Can be accessible to non-admin or hide.
+	Author: Nazmul Ahsan
+	Author URI: http://mukto.medhabi.com
+	Plugin URI: http://medhabi.com
+	Version: 1.0.0
+	Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change.
 */
 //===session enable for WP starts===//
-add_action('init', 'simpleSessionStart', 1);
-add_action('wp_logout', 'simpleSessionDestroy');
-add_action('wp_login', 'simpleSessionDestroy');
-function simpleSessionStart() {
+add_action('init', 'mdc_session_Start', 1);
+add_action('wp_logout', 'mdc_session_Destroy');
+add_action('wp_login', 'mdc_session_Destroy');
+function mdc_session_Start() {
     if(!session_id())session_start();
 }
-function simpleSessionDestroy() {
+function mdc_session_Destroy() {
     session_destroy ();
 }
-function simpleSessionGet($key, $default='') {
+function mdc_session_Get($key, $default='') {
     if(isset($_SESSION[$key])) {
         return $_SESSION[$key];
     } else {
         return $default;
     }
 }
-function simpleSessionSet($key, $value) {
+function mdc_session_Set($key, $value) {
     $_SESSION[$key] = $value;
 }
 //===session enable for WP ends===//
