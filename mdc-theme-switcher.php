@@ -1,11 +1,11 @@
 <?php
 /*
 	Plugin Name: MDC Theme Switcher
-	Description: This plugin allows to switch and preview between available themes. It adds a sticky bar to front-end with a dropdown list of themes. Can be accessible to non-admin or hide.
+	Description: This plugin allows to switch and preview between available themes. It adds a sticky bar to front-end with a dropdown list of themes. Use shortcode [mdc_theme_swicher] anywhere to display theme switcher.
 	Author: Nazmul Ahsan
 	Author URI: http://mukto.medhabi.com
 	Plugin URI: http://medhabi.com
-	Version: 1.0.0
+	Version: 1.0.1
 	Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change.
 */
 //===session enable for WP starts===//
@@ -65,14 +65,16 @@ $themes = get_option('themes_array');
 </form>
 <?php
 }
-add_shortcode('mdc_theme_swicher', 'mdc_themes_dropdown');
+if(get_option('enable_shortcode') == 1){
+	add_shortcode('mdc_theme_swicher', 'mdc_themes_dropdown');
+}
 add_filter('widget_text', 'do_shortcode'); 
 //add sticky bar
 function mdc_sticky_bar(){
 ?>
-<div class="mdc_sticky_bar">
+<div class="mdc_sticky_bar" style="background: <?php if(get_option('sticky_bar_bg')){echo get_option('sticky_bar_bg');} else{ echo "#336699";}?>">
 	<div class="mdc_logo mdc_col mdc_left">
-		<h3 class="mdc_h3"><?php echo get_option('display_text');?></h3>
+		<h3 class="mdc_h3" style="color: <?php if(get_option('sticky_bar_txt')){echo get_option('sticky_bar_txt');} else{ echo "#fff";}?>"><?php echo get_option('display_text');?></h3>
 	</div>
 	<div class="mdc_selector mdc_col mdc_left">
 		<?php mdc_themes_dropdown(); ?>
@@ -85,6 +87,7 @@ function mdc_sticky_bar(){
 </div>
 <?php
 }
+
 if(get_option('enable_sticky') == 1){
 	add_action('wp_footer', 'mdc_sticky_bar');
 }
@@ -119,7 +122,7 @@ function mdc_change_theme(){
 		add_action('wp_head', 'mdc_reload_once');
 	}
 	elseif(empty($_SESSION['theme'])){
-		switch_theme('twentytwelve');
+		switch_theme(get_option('def_theme'));
 		add_action('wp_head', 'mdc_reload_once');
 	}
 }
