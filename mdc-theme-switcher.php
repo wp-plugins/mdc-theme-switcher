@@ -6,7 +6,7 @@
 	Author URI: http://mukto.medhabi.com
 	Plugin URI: http://medhabi.com
 	Version: 1.0.1
-	Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change.
+	Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change, mdc
 */
 //===session enable for WP starts===//
 add_action('init', 'mdc_session_Start', 1);
