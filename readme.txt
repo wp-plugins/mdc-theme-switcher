@@ -1,4 +1,4 @@
-=== MDC Theme Switcher ===
+=== MDC Theme Switcher [DON'T DOWNLOAD] ===
 Contributors: mukto90
 Donate link: http://mukto.medhabi.com/
 Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change, mdc
@@ -7,7 +7,7 @@ Tested up to: 3.9.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
+[This Plugin is causing problems with latest version of WP. Please don't download. I'm fixing it ASAP.]
 MDC Theme Switcher allows to change and preview among available themes of a WordPress from front-end.
 
 == Description ==
