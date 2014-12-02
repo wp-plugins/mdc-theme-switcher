@@ -1,6 +1,6 @@
 <?php
 /*
-	Plugin Name: MDC Theme Switcher [DON"T DOWNLOAD]
+	Plugin Name: MDC Theme Switcher [DON'T DOWNLOAD]
 	Description: [This Plugin is causing problems with latest version of WP. Please don't download. I'm fixing it ASAP.]
 	This plugin allows to switch and preview between available themes. It adds a sticky bar to front-end with a dropdown list of themes. Use shortcode [mdc_theme_swicher] anywhere to display theme switcher.
 	Author: Nazmul Ahsan
