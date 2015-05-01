@@ -1,9 +1,9 @@
 === MDC Theme Switcher [DON'T DOWNLOAD] ===
-Contributors: mukto90
+Contributors: mukto90, medhabidotcom
 Donate link: http://mukto.medhabi.com/
 Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change, mdc
 Requires at least: 3.0.1
-Tested up to: 3.9.1
+Tested up to: 4.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
