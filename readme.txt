@@ -1,4 +1,4 @@
-=== MDC Theme Switcher [DON'T DOWNLOAD] ===
+=== MDC Theme Switcher ===
 Contributors: mukto90, medhabidotcom
 Donate link: http://mukto.medhabi.com/
 Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change, mdc
