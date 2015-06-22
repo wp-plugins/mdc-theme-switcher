@@ -84,7 +84,7 @@ class MDC_Theme_Switcher_option_page{
 													<th scope="row"><label for="mdc_themes_to_show">Themes to show</label></th>
 													<td>
 													<?php foreach($themes as $theme):
-													if(array_key_exists($theme->stylesheet, $selected_themes)){ $checked = ' checked=""';} else { $checked = '';}
+													if(is_array($selected_themes) && array_key_exists($theme->stylesheet, $selected_themes)){ $checked = ' checked=""';} else { $checked = '';}
 														echo '<p><input type="checkbox" '.$checked.' value="'.$theme->Name.'" id="'.$theme->stylesheet.'" name="mdc_themes_to_show['.$theme->stylesheet.']"/><label for="'.$theme->stylesheet.'">'.$theme->Name.'</label></p>';
 													
 													endforeach; ?>
