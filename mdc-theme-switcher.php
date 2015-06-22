@@ -78,12 +78,13 @@ $css .= "</style>";
 			<input type="hidden" name="redirect_to" class="mdc_redirect_to" value="'.$current_url.'">
 			<select class="mdc_choose_theme">';
 		$list_theme .='<option disabled>Select a Theme</option>';
-		foreach ($selected_themes as $stylesheet=>$name) {
-			if($stylesheet == $active_theme){ $selected = " selected";}
-			$list_theme .= '<option'.$selected.' value="'.$stylesheet.'">'.$name.'</option>';
-			$selected = '';
+		if(is_array($selected_themes)){
+			foreach ($selected_themes as $stylesheet=>$name) {
+				if($stylesheet == $active_theme){ $selected = " selected";}
+				$list_theme .= '<option'.$selected.' value="'.$stylesheet.'">'.$name.'</option>';
+				$selected = '';
+			}
 		}
-
 		$list_theme .= '</select>
 			</form>';
 
