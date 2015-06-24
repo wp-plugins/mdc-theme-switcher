@@ -4,7 +4,7 @@ Donate link: http://mukto.medhabi.com/
 Tags: theme, preview, change, activate, front-end, switch, theme switch, theme switcher, theme change, mdc
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 MDC Theme Switcher allows to change and preview among available themes of a WordPress from front-end.
@@ -15,6 +15,8 @@ MDC Theme Switcher allows to change and preview among available themes of a Word
 
 It also enables a shortcode `[mdc_theme_swicher]`, which can be added anywhere of the WordPress. In a post, page or widget. Even in template files!
 
+= Video =
+https://www.youtube.com/watch?v=tqUAlUd6IGE
 
 == Installation ==
 
